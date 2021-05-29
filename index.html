@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title> My family book </title>
+    </head>
+    <body style="text-align: center;">
+    <h1>Family Book</h1>
+    <img src="https://i.postimg.cc/MKdhy06Z/family.jpg"
+    style="width: 40%; height: 400px;" id="family_member_image">
+    <br>
+    <div id="family_member_name">Family book </div>
+    <br>
+    <button onclick="update();">Next</button>
+        <script>
+var images =
+[
+     "https://i.postimg.cc/wjMnFtMX/father.png",
+    "https://i.postimg.cc/bw5W5zSK/mother.jpg",
+    "https://cdn.friendlystock.com/wp-content/uploads/2018/05/3-teenage-boy-holding-skateboard-cartoon-clipart.jpg",
+    "https://tse2.mm.bing.net/th?id=OIP.Et-Pk5M9WI1S5GBl-sWQTgHaHa&pid=Api&P=0&w=300&h=300",
+    "https://i.postimg.cc/MKdhy06Z/family.jpg"
+         ] ;
+var names =["Yatharth kochar", "Sheetal Kochar", "Aditya Kochar", "Ayush Kochar", "Family"];
+var i = 0;
+function update()
+{ 
+    
+    var updatedImage = images[i];
+    var updatedName = names[i];
+    document.getElementById("family_member_image").src = updatedImage;
+    document.getElementById("family_member_name").innerHTML = updatedName;
+    i++;
+    
+    if(i > 4 )
+    {
+        i = 0;
+    }
+}
+
+        </script>
+    </body>
+</html>
